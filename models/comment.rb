@@ -1,5 +1,4 @@
-
-class Link < ActiveRecord::Base
+class Comment < ActiveRecord::Base
 	belongs_to :user
 	belongs_to :tv_show
 end

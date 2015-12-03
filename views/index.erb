@@ -1,0 +1,30 @@
+<h1>Welcome to Benito's TV Forum!</h1>
+
+<p><a href="/users/new">Sign Up</a></p>
+
+
+
+<h2>Shows:</h2>
+
+
+<ul>
+	<% @shows.each do |show| %>
+
+<li>
+	<%= show.title %>
+	<br/>
+	Genre: <%= show.genre_id %>
+	<br/>
+	Rating: <%= show.rating %>
+	<br/>
+	Info: <%= show.info %>
+	
+</li>
+
+
+<% end %>
+
+
+</ul>
+
+

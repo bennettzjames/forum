@@ -1,15 +1,16 @@
-<h1>Welcome to Benito's TV Forum!</h1>
+<h3>What's up <%= @user.username %>?</h3>
 
-<p><a href="/users/new">Sign Up</a></p>
+<form action="/sessions" method="POST">
+	<input type="hidden" name="_method" value="delete">
+	<button>Log Out</button>
+</form>
 
-
+<h1>Benito's TV Forum</h1>
 
 <h2>Shows:</h2>
 
-
 <ul>
 	<% @shows.each do |show| %>
-
 <li>
 	<%= show.title %>
 	<br/>
@@ -17,14 +18,9 @@
 	<br/>
 	Rating: <%= show.rating %>
 	<br/>
-	Info: <%= show.info %>
-	
+	Info: <%= show.info %>	
 </li>
-
-
-<% end %>
-
-
+	<% end %>
 </ul>
 
 

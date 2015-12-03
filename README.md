@@ -2,4 +2,6 @@ lets psuedocode baby!
 
 
 Ask a user to sign in or sign up to use the site. 
-- use the 
+	- need to follow the layout from the lesson
+Need to add password
+

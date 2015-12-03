@@ -6,6 +6,7 @@ drop table if exists comments;
 
 create table users (
 	id integer primary key,
+	password_digest varchar,
 	username varchar,
 	avatar_img varchar
 );

@@ -26,7 +26,7 @@ shows = [
 ]
 
 
-Tv_show.create(shows)
+TvShow.create(shows)
 
 
 links = [

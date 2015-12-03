@@ -41,9 +41,19 @@ module App
 		erb :index
 	end
 
+	get "/new_show" do 	
+		erb :new_show
+	end
+
+	post "/home" do 
+		@show = TvShow.create(title: params["title"], rating: params["rating"], info: params["info"])
+		redirect to "/home"
+	end
+
 
 	end
 end
+
 
 
 

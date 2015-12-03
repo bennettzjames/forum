@@ -17,15 +17,17 @@
 <ul>
 	<% @shows.each do |show| %>
 <li>
+<a href="/shows/<%= show["id"] %>">
 	<%= show.title %>
-	<br/>
+	<!-- <br/>
 	<%= show.genre %>
 	<br/>
 	Rating: <%= show.rating %>
 	<br/>
-	Info: <%= show.info %>	
+	Info: <%= show.info %>	 -->
 </li>
 	<% end %>
 </ul>
+</a>
 
 

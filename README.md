@@ -7,7 +7,7 @@ Need to add password
 
 
 
-Each show needs to be separate and be a link to a separate page by the show's id. 
+Each show needs to be separate and be a link to a separate page by the show's id. **add show photo if there is time****
 	-on that page i need to have the comments section
 		- comments should be sorted by popularity(maybe # of likes.)
 	-also need the links section

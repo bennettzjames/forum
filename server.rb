@@ -50,6 +50,13 @@ module App
 		redirect to "/home"
 	end
 
+	get "/shows/:id" do 
+		id = params["id"]
+		@dis_show = TvShow.find(params["id"])
+		erb :show
+
+	end
+
 
 	end
 end

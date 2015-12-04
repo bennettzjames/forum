@@ -14,7 +14,7 @@ create table users (
 
 create table tv_shows (
 	id integer primary key,
-	genre varchar,
+	genre_id integer,
 	title varchar,
 	rating integer,
 	info text

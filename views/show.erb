@@ -1,5 +1,21 @@
-<h1><%= @dis_show["title"] %></h1>
+<h1><%= @dis_show.title %></h1>
 
-<p>Genre: <%= @dis_show["genre"] %></p>
-<p>Average User Rating: <%= @dis_show["rating"] %></p>
-<p>Info: <%= @dis_show["info"] %></p>
+<p>Genre: <%= @dis_show.genre %></p>
+<p>Average User Rating: <%= @dis_show.rating %></p>
+<p>Info: <%= @dis_show.info %></p>
+
+<form action="/shows/<%= @dis_show.id %>/comments" method="POST">
+	<input type="text" name="comment" placeholder="write your comment">
+	<button>Submit Comment</button>
+
+</form>
+
+<div> 
+<% @dis_show.comments.each do |comment| %>
+
+<p>User: <%= comment.user.username %></p>
+
+<p>Comment: <%= comment.comment %></p>
+
+<% end %>
+</div>

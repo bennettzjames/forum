@@ -9,6 +9,8 @@ users = [
 
 User.create(users)
 
+
+
 # genres = [
 # 	{name: "Action"},
 # 	{name: "Comedy"},

@@ -28,7 +28,12 @@ module App
 
 	post "/users" do 
 		@user = User.create(username: params["username"], avatar_img: params["avatar_img"], password: params["password"], password_confirmation: params["password_confirmation"])
+		session[:user_id] = @user.id 
 		redirect to "/home"
+	end
+
+	get "/thanks" do 
+		erb :thanks
 	end
 
 	get "/login" do 
@@ -56,6 +61,11 @@ module App
 		erb :show
 
 	end
+
+	post '/shows/:id/comments' do
+    	Comment.create(comment: params["comment"], user_id: session[:user_id], tv_show_id: params["id"])
+    	redirect to "/shows/#{params[:id]}"
+ 	end
 
 
 	end

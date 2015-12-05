@@ -51,7 +51,7 @@ module App
 	end
 
 	post "/home" do 
-		@show = TvShow.create(title: params["title"], rating: params["rating"], info: params["info"])
+		@show = TvShow.create(title: params["title"], info: params["info"])
 		redirect to "/home"
 	end
 
@@ -69,6 +69,12 @@ module App
 
  	post "/shows/:id/links" do 
  		Link.create(link: params["link"], user_id: session[:user_id], tv_show_id: params["id"], subscription: params["subscription"])
+ 		redirect to "/shows/#{params[:id]}"
+ 	end
+
+ 	post "/shows/:id/ratings" do 
+ 		Rating.create(rating: params["rating"], tv_show_id: params["id"], user_id: session[:user_id])
+ 		@avg = Rating.average("rating")
  		redirect to "/shows/#{params[:id]}"
  	end
 

@@ -32,8 +32,8 @@ User.create(users)
 
 
 links = [
-	{tv_show_id: 1, user_id: 1, link: "netflix.com", subscription: 1},
-	{tv_show_id: 1, user_id: 1, link: "watchseries.to", subscription: 0}
+	{tv_show_id: 1, user_id: 1, link: "netflix.com", subscription: "true"},
+	{tv_show_id: 1, user_id: 1, link: "watchseries.to", subscription: "false"}
 ]
 
 

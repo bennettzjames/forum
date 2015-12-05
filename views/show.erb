@@ -1,8 +1,34 @@
 <h1><%= @dis_show.title %></h1>
 
+<a href="/home">
+<button>Home</button>
+
+</a>
+
 <p>Genre: <%= @dis_show.genre %></p>
-<p>Average User Rating: <%= @dis_show.rating %></p>
+
 <p>Info: <%= @dis_show.info %></p>
+
+<form action="/shows/<%= @dis_show.id %>/ratings" method="POST">
+	<input type="text" name="rating" placeholder="Give a rating 1 - 10">
+	<button>Submit Rating</button>
+</form>
+
+<div>
+<% @dis_show.ratings.each do |rating| %>
+
+
+<p><%= rating.user.username %> Rated this show: <%= rating.rating %> </p>
+
+<% end %>
+
+</div>
+
+<div>
+<%= @avg %>
+</div>
+
+
 
 <form action="/shows/<%= @dis_show.id %>/comments" method="POST">
 	<input type="text" name="comment" placeholder="write your comment">
@@ -21,8 +47,8 @@
 </div>
 
 <form action="/shows/<%= @dis_show.id %>/links" method="POST">
-	<input type="text" name="link" placeholder="paste link here:">
-	<input type="text" name="subscription" placeholder="requires subscription?">
+	Link: <input type="text" name="link" placeholder="paste link here:">
+	Requires Subscription?<input type="text" name="subscription" placeholder="Enter 'true' or 'false'">
 	<button>Submit Link</button>
 </form>
 
@@ -32,10 +58,12 @@
 
 <p>Who gave us this beauty: <%= link.user.username %></p>
 <p>Link: <%= link.link %></p>
-<p>Does this link require a subscription? <%= link.subscription %></p>
+<p>Requires subscription: <%= link.subscription %></p>
 
 <% end %>
 </div>
+
+
 
 
 

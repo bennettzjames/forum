@@ -3,6 +3,7 @@ drop table if exists tv_shows;
 drop table if exists genres;
 drop table if exists links;
 drop table if exists comments;
+drop table if exists ratings;
 
 create table users (
 	id integer primary key,
@@ -16,7 +17,6 @@ create table tv_shows (
 	id integer primary key,
 	genre varchar,
 	title varchar,
-	rating integer,
 	info text
 );
 
@@ -31,7 +31,7 @@ create table links (
 	tv_show_id integer,
 	user_id integer,
 	link text,
-	subscription integer
+	subscription boolean
 );
 
 create table comments (
@@ -39,4 +39,11 @@ create table comments (
 	comment text,
 	user_id integer,
 	tv_show_id integer
+);
+
+create table ratings (
+	id integer primary key,
+	rating integer,
+	tv_show_id integer,
+	user_id integer
 );

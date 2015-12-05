@@ -67,10 +67,10 @@ module App
     	redirect to "/shows/#{params[:id]}"
  	end
 
+ 	post "/shows/:id/links" do 
+ 		Link.create(link: params["link"], user_id: session[:user_id], tv_show_id: params["id"], subscription: params["subscription"])
+ 		redirect to "/shows/#{params[:id]}"
+ 	end
 
 	end
 end
-
-
-
-

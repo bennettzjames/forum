@@ -19,3 +19,25 @@
 
 <% end %>
 </div>
+
+<form action="/shows/<%= @dis_show.id %>/links" method="POST">
+	<input type="text" name="link" placeholder="paste link here:">
+	<input type="text" name="subscription" placeholder="requires subscription?">
+	<button>Submit Link</button>
+</form>
+
+
+<div>
+<% @dis_show.links.each do |link| %>
+
+<p>Who gave us this beauty: <%= link.user.username %></p>
+<p>Link: <%= link.link %></p>
+<p>Does this link require a subscription? <%= link.subscription %></p>
+
+<% end %>
+</div>
+
+
+
+
+

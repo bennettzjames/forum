@@ -1,28 +1,34 @@
-<h3>What's up <%= @user.username %>?</h3>
+<div id="left-half">
+	<h1>Benito's TV Forum</h1>
 
-<form action="/sessions" method="POST">
-	<input type="hidden" name="_method" value="delete">
-	<button>Log Out</button>
-</form>
+	<img id="start_img" src="/tv.png" style="height:150px;width:150px;">
 
-<h1>Benito's TV Forum</h1>
+	<h3>What's up <%= @user.username %>?</h3>
 
-<button>
-<a href="/new_show">Add a New Show</a>
-</button>
+	<form action="/sessions" method="POST">
+		<input type="hidden" name="_method" value="delete">
+		<button>Log Out</button>
+	</form>
 
+	<button>
+	<a id="newshow" href="/new_show">Add a New Show</a>
+	</button>
+</div>
 
-<h2>Shows:</h2>
+<div id="right-half">
+	<h1>Shows:</h1>
 
-<ul>
-	<% @shows.each do |show| %>
-<li>
-<a href="/shows/<%= show["id"] %>">
-	<%= show.title %>
-	
-</li>
-	<% end %>
-</ul>
-</a>
+	<ul>
+		<% @shows.each do |show| %>
+		<li>
+		<!-- <a href="<%= show.show_img_url %>"></a> -->
+		<a id="show-name" href="/shows/<%= show["id"] %>">
+			<%= show.title %>
+			
+		</li>
+			<% end %>
+	</ul>
+	</a>
+</div>
 
 

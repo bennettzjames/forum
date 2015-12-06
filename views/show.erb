@@ -1,4 +1,7 @@
-<h1><%= @dis_show.title %></h1>
+<h1 id="title"><%= @dis_show.title %></h1>
+
+
+<img id="show-img" src="/tv.png">
 
 <a href="/home">
 <button>Home</button>
@@ -7,61 +10,71 @@
 
 <p>Genre: <%= @dis_show.genre %></p>
 
-<p>Info: <%= @dis_show.info %></p>
+<p id="info">Info: <%= @dis_show.info %></p>
+
+<div>
+Average User Rating:	<%= @avg %>
+</div>
+
+<div id="rating">
 
 <form action="/shows/<%= @dis_show.id %>/ratings" method="POST">
 	<input type="text" name="rating" placeholder="Give a rating 1 - 10">
 	<button>Submit Rating</button>
 </form>
 
-<div>
+
 <% @dis_show.ratings.each do |rating| %>
 
 
-<p><%= rating.user.username %> Rated this show: <%= rating.rating %> </p>
+<p class="inner"><%= rating.user.username %> Rated this show: <%= rating.rating %> </p>
 
 <% end %>
 
 </div>
 
-<div>
-<%= @avg %>
+
+<div id="links">
+	<form action="/shows/<%= @dis_show.id %>/links" method="POST">
+		Link: <input type="text" name="link" placeholder="paste link here:">
+		Requires Subscription?<input type="text" name="subscription" placeholder="Enter 'true' or 'false'">
+		<button>Submit Link</button>
+	</form>
+
+
+
+	<% @dis_show.links.each do |link| %>
+
+	<p class="inner">
+	Submitted By: <%= link.user.username %>
+	<br/>
+	Link: <%= link.link %>
+	<br/>
+	Requires subscription: <%= link.subscription %>
+	</p>
+
+	<% end %>
 </div>
 
-
-
+<div class="comments"> 
+<h3>Comments:</h3>
 <form action="/shows/<%= @dis_show.id %>/comments" method="POST">
 	<input type="text" name="comment" placeholder="write your comment">
 	<button>Submit Comment</button>
 
 </form>
 
-<div> 
-<% @dis_show.comments.each do |comment| %>
+	<% @dis_show.comments.each do |comment| %>
 
-<p>User: <%= comment.user.username %></p>
+	<p class="inner">
+	User: <%= comment.user.username %>
+	<br/>
+	Comment: <%= comment.comment %>
+	</p>
 
-<p>Comment: <%= comment.comment %></p>
-
-<% end %>
+	<% end %>
 </div>
 
-<form action="/shows/<%= @dis_show.id %>/links" method="POST">
-	Link: <input type="text" name="link" placeholder="paste link here:">
-	Requires Subscription?<input type="text" name="subscription" placeholder="Enter 'true' or 'false'">
-	<button>Submit Link</button>
-</form>
-
-
-<div>
-<% @dis_show.links.each do |link| %>
-
-<p>Who gave us this beauty: <%= link.user.username %></p>
-<p>Link: <%= link.link %></p>
-<p>Requires subscription: <%= link.subscription %></p>
-
-<% end %>
-</div>
 
 
 

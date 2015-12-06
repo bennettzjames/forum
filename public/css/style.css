@@ -1,0 +1,69 @@
+body {
+	background: #38B6E0;
+	color: white;
+}
+
+.start {
+	color: white;
+	text-align: center;
+	border-top: 5px solid purple;
+	
+}
+
+.startup {
+	color: white;
+	text-align: center;
+	font-style: 30px;
+}
+
+#login {
+	color: white;
+	text-align: center;
+	font-size: 30px;
+}
+
+#login_img {
+	display: block;
+	position: absolute;
+	left: 500px;
+}
+
+#newshow {
+	font-size: 35px;
+	color: blue;
+}
+
+#info {
+	font-size: 24px;
+}
+
+#rating, #links {
+	float: left;
+	width: 49%;
+	border: 5px solid purple;
+}
+
+.inner {
+	border: 3px solid purple;
+}
+
+.comments {
+	float: left;
+	width: 100%;
+}
+
+#show-img {
+	float: right;
+	width: 120px;
+
+}
+
+#left-half, #right-half {
+	float: left;
+	width: 50%;
+}
+
+#show-name {
+	font-size: 32px;
+	color: blue;
+}

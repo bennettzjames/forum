@@ -28,3 +28,5 @@ checklist:
 -first show not working
 -css styling
 -random button
+-avatar img
+-show images

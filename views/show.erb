@@ -1,5 +1,6 @@
 <h1 id="title"><%= @dis_show.title %></h1>
 
+<img class="show-page-img" src="<%= @dis_show.show_img_url %>">
 
 <img id="show-img" src="/tv.png">
 
@@ -8,12 +9,12 @@
 
 </a>
 
-<p>Genre: <%= @dis_show.genre %></p>
+<!-- <p>Genre: <%= @dis_show.genre %></p> -->
 
 <p id="info">Info: <%= @dis_show.info %></p>
 
 <div>
-Average User Rating:	<%= @avg %>
+Average User Rating: <%= @avg %>
 </div>
 
 <div id="rating">

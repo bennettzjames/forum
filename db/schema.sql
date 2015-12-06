@@ -15,7 +15,7 @@ create table users (
 
 create table tv_shows (
 	id integer primary key,
-	genre_id varchar,
+	genre varchar,
 	title varchar,
 	info text,
 	show_img_url text

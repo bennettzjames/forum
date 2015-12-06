@@ -67,3 +67,18 @@ body {
 	font-size: 32px;
 	color: blue;
 }
+
+.user-img {
+	max-height: 200px;
+	max-width: 200px;
+}
+
+.show-img {
+	max-height: 100px;
+	max-width: 100px;
+}
+
+.show-page-img {
+	max-height: 200px;
+	max-width: 200px;
+}

@@ -4,6 +4,7 @@
 	<img id="start_img" src="/tv.png" style="height:150px;width:150px;">
 
 	<h3>What's up <%= @user.username %>?</h3>
+	<img class="user-img" src="<%= @user.avatar_img %>">
 
 	<form action="/sessions" method="POST">
 		<input type="hidden" name="_method" value="delete">
@@ -21,7 +22,7 @@
 	<ul>
 		<% @shows.each do |show| %>
 		<li>
-		<!-- <a href="<%= show.show_img_url %>"></a> -->
+		<img class= "show-img" src="<%= show["show_img_url"] %>">
 		<a id="show-name" href="/shows/<%= show["id"] %>">
 			<%= show.title %>
 			

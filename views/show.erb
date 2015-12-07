@@ -1,31 +1,25 @@
 <div class="left-stuff">
-<h1 id="title"><%= @dis_show.title %></h1>
+	<h1 id="title"><%= @dis_show.title %></h1>
 
-<img class="show-page-img" src="<%= @dis_show.show_img_url %>">
+	<img class="show-page-img" src="<%= @dis_show.show_img_url %>">
 
-<img id="show-img" src="/tv.png">
+	<img id="show-img" src="/tv.png">
 
-<a href="/home">
-<button>Home</button>
+	<a href="/home">
+		<button>Home</button>
+	</a>
 
-</a>
-
-<p id="info">Info: <%= @dis_show.info %></p>
+	<p id="info">Info: <%= @dis_show.info %></p>
 
 </div>
 
 <div id="rating">
-
-Average User Rating: <%= @avg %>
-
-
-<form action="/shows/<%= @dis_show.id %>/ratings" method="POST">
-	<input type="text" name="rating" placeholder="Give a rating 1 - 10">
-	<button>Submit Rating</button>
-</form>
-
+	Average User Rating: <%= @avg %>
+	<form action="/shows/<%= @dis_show.id %>/ratings" method="POST">
+		<input type="text" name="rating" placeholder="Give a rating 1 - 10">
+		<button>Submit Rating</button>
+	</form>
 </div>
-
 
 <div id="links">
 	<form action="/shows/<%= @dis_show.id %>/links" method="POST">
@@ -45,28 +39,25 @@ Average User Rating: <%= @avg %>
 	<br/>
 	Requires subscription: <%= link.subscription %>
 	</p>
-
 	<% end %>
 </div>
 
-
 <div class="comments"> 
-<h3>Comments:</h3>
-<form action="/shows/<%= @dis_show.id %>/comments" method="POST">
-	<input type="text" name="comment" placeholder="write your comment">
-	<button>Submit Comment</button>
+	<h3>Comments:</h3>
+	<form action="/shows/<%= @dis_show.id %>/comments" method="POST">
+		<input type="text" name="comment" placeholder="write your comment">
+		<button>Submit Comment</button>
+	</form>
 
-</form>
+		<% @dis_show.comments.each do |comment| %>
 
-	<% @dis_show.comments.each do |comment| %>
+		<p class="inner">
+		User: <%= comment.user.username %>
+		<br/>
+		Comment: <%= comment.comment %>
+		</p>
 
-	<p class="inner">
-	User: <%= comment.user.username %>
-	<br/>
-	Comment: <%= comment.comment %>
-	</p>
-
-	<% end %>
+		<% end %>
 </div>
 
 

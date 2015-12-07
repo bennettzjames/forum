@@ -12,7 +12,9 @@
 	</form>
 
 	<button>
-	<a id="newshow" href="/new_show">Add a New Show</a>
+		<a id="newshow" href="/new_show">
+		Add a New Show
+		</a>
 	</button>
 </div>
 
@@ -22,14 +24,15 @@
 	<ul>
 		<% @shows.each do |show| %>
 		<li>
-		<img class= "show-img" src="<%= show["show_img_url"] %>">
-		<a id="show-name" href="/shows/<%= show["id"] %>">
-			<%= show.title %> <a id="num-of-comments">Comments:<%= show.comments.count(:all) %></a>
+			<img class= "show-img" src="<%= show["show_img_url"] %>">
+			<a id="show-name" href="/shows/<%= show["id"] %>">
+				<%= show.title %> <a id="num-of-comments">Comments:<%= show.comments.count(:all) %>
+			</a>
+			</a>
 			
 		</li>
-			<% end %>
+		<% end %>
 	</ul>
-	</a>
 </div>
 
 

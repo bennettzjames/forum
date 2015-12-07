@@ -8,6 +8,7 @@ This is an internet forum devoted to the topic of television shows. Once a user 
 [Benito's TV Forum](https://salty-plateau-4064.herokuapp.com/)
 
 **List of Technologies Used:**
+	
 	*Ruby
 	*HTML
 	*CSS
@@ -18,6 +19,7 @@ This is an internet forum devoted to the topic of television shows. Once a user 
 
 **Planning Materials:**	
 (All are within the Planning Folder)
+	
 	1. User Stories
 	2. Wireframes
 	3. ERD

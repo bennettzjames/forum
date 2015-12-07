@@ -17,6 +17,7 @@
 	*PostgreSQL
 
 **Planning Materials:**	
-	[User Stories](/user_stories.md) 
-	[Wireframes](/Forum_wire_frams.pdf)
-	[ERD](/erd.md)
+(All are within the Forum Folder)
+	1. User Stories
+	2. Wireframes
+	3. ERD

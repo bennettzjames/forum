@@ -63,7 +63,7 @@ module App
 		id = params["id"]
 		show = TvShow.find(params["id"])
 		@dis_show = TvShow.find(params["id"])
-		@avg = show.ratings.average("rating")
+		@avg = show.ratings.average("rating").round(1)
 		erb :show
 
 	end

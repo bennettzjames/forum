@@ -17,6 +17,6 @@
 	*PostgreSQL
 
 **Planning Materials:**	
-	*[User Stories](/user_stories.md) 
-	*[Wireframes](/Forum_wire_frams.pdf)
-	*[ERD](/erd.md)
+	[User Stories](/user_stories.md) 
+	[Wireframes](/Forum_wire_frams.pdf)
+	[ERD](/erd.md)

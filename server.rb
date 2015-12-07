@@ -46,7 +46,7 @@ module App
 
 		get "/home" do 	
 			@user = User.find(session[:user_id]) if session[:user_id]
-			@shows = TvShow.all
+			@shows = TvShow.all.order(title: :asc)
 			erb :index
 		end
 

@@ -17,7 +17,6 @@ This is an internet forum devoted to the topic of television shows. Once a user 
 	*PostgreSQL
 
 **Planning Materials:**	
-(All are within the Forum Folder)
-	1. User Stories
-	2. Wireframes
-	3. ERD
+	*[User Stories](/forum/user_stories.md) 
+	*[Wireframes](/forum/Forum_wire_frams.pdf)
+	*[ERD](/forum/erd.md)

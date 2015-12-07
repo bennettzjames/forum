@@ -14,4 +14,4 @@ class CreateRatings < ActiveRecord::Migration
 	end
 end
 
-CreateRatings.migrate(up)
+CreateRatings.migrate(:up)

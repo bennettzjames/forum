@@ -12,4 +12,4 @@ class CreateGenres < ActiveRecord::Migration
 	end
 end
 
-CreateGenres.migrate(up)
+CreateGenres.migrate(:up)

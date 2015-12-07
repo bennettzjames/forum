@@ -14,4 +14,4 @@ class CreateComments < ActiveRecord::Migration
 	end
 end
 
-CreateComments.migrate(up)
+CreateComments.migrate(:up)

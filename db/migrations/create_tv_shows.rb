@@ -15,4 +15,4 @@ class CreateTvShows < ActiveRecord::Migration
 	end
 end
 
-CreateTvShows.migrate(up)
+CreateTvShows.migrate(:up)

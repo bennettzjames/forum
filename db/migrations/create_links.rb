@@ -15,4 +15,4 @@ class CreateLinks < ActiveRecord::Migration
 	end
 end
 
-CreateLinks.migrate(up)
+CreateLinks.migrate(:up)

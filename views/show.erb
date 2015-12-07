@@ -1,3 +1,4 @@
+<div class="left-stuff">
 <h1 id="title"><%= @dis_show.title %></h1>
 
 <img class="show-page-img" src="<%= @dis_show.show_img_url %>">
@@ -9,15 +10,13 @@
 
 </a>
 
-<!-- <p>Genre: <%= @dis_show.genre %></p> -->
-
 <p id="info">Info: <%= @dis_show.info %></p>
 
-<div>
-Average User Rating: <%= @avg %>
 </div>
 
 <div id="rating">
+Average User Rating: <%= @avg %>
+
 
 <form action="/shows/<%= @dis_show.id %>/ratings" method="POST">
 	<input type="text" name="rating" placeholder="Give a rating 1 - 10">
@@ -56,6 +55,7 @@ Average User Rating: <%= @avg %>
 
 	<% end %>
 </div>
+
 
 <div class="comments"> 
 <h3>Comments:</h3>

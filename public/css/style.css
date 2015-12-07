@@ -1,12 +1,14 @@
 body {
-	background: #38B6E0;
-	color: white;
+	background-image: url("../background.png");
+	background-size: cover;
+	margin-right: 20%;
+	margin-top: 10%;
+	background-color: #C9A3D6;
 }
 
 .start {
 	color: white;
 	text-align: center;
-	border-top: 5px solid purple;
 	
 }
 
@@ -25,7 +27,14 @@ body {
 #login_img {
 	display: block;
 	position: absolute;
-	left: 500px;
+	left: 380px;
+}
+
+.signup {
+	margin-left: 25%;
+	color: white;
+	margin-top: 30%;
+
 }
 
 #newshow {
@@ -37,10 +46,17 @@ body {
 	font-size: 24px;
 }
 
-#rating, #links {
+#rating {
 	float: left;
-	width: 49%;
-	border: 5px solid purple;
+	width: 25%;
+	border: 5px solid white;
+	margin-left: 25%;
+}
+
+#links {
+	float: right;
+	width: 45%;
+	border: 5px solid white;
 }
 
 .inner {
@@ -49,16 +65,26 @@ body {
 
 .comments {
 	float: left;
-	width: 100%;
+	width: 74%;
+	margin-left: 25%;
+	border: 5px solid white;
+	margin-top: 10px;
 }
 
 #show-img {
 	float: right;
 	width: 120px;
+	margin-right: 100px;
 
 }
 
-#left-half, #right-half {
+#left-half {
+	float: left;
+	width: 30%;
+	margin-left: 20%;
+}
+
+#right-half {
 	float: left;
 	width: 50%;
 }
@@ -81,4 +107,9 @@ body {
 .show-page-img {
 	max-height: 200px;
 	max-width: 200px;
+}
+
+.left-stuff {
+	margin-left: 20%;
+	margin-top: 20%;
 }

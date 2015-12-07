@@ -61,7 +61,9 @@ module App
 
 	get "/shows/:id" do 
 		id = params["id"]
+		show = TvShow.find(params["id"])
 		@dis_show = TvShow.find(params["id"])
+		@avg = show.ratings.average("rating")
 		erb :show
 
 	end
@@ -77,9 +79,7 @@ module App
  	end
 
  	post "/shows/:id/ratings" do 
- 		show = TvShow.find(params[:id])
  		Rating.create(rating: params["rating"], tv_show_id: params["id"], user_id: session[:user_id])
- 		@avg = show.ratings.average("rating")
  		redirect to "/shows/#{params[:id]}"
  	end
 

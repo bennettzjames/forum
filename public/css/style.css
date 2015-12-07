@@ -118,3 +118,8 @@ body {
 .new_show_erb {
 	margin-left: 15%;
 }
+
+#num-of-comments {
+	font-size: 18px;
+	color: black;
+}
